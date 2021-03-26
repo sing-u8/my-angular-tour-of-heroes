@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+$commonFontFamily: Arial, Helvetica, sans-serif;
+h1 {
+  color: #369;
+  font-family: $commonFontFamily;
+  font-size: 250%;
+}
+h2,
+h3 {
+  color: #444;
+  font-family: $commonFontFamily;
+  font-weight: lighter;
+}
+body {
+  margin: 2em;
+}
+
+body,
+input[type="text"],
+button {
+  color: #333;
+  font-family: Cambria, Georgia;
+}
+/* 모든 엘리먼트에 적용되는 스타일 */
+* {
+  font-family: $commonFontFamily;
+}
