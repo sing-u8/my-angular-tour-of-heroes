@@ -1,0 +1,17 @@
+<div id="search-component">
+  <h4><label for="search-box">Hero Search</label></h4>
+
+  <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <!--
+          $는 Observable을 뜻하는 관용적 표현입니다.
+          *ngFor 자체로는 Observable을 대상으로 어떤 작업도 수행하지 않기 때문에 파이프 문자(|)를 붙이고 async 파이프를 연결해 줍니다. 이 파이프는 AsyncPipe에 정의된 파이프이며, Observable을 자동으로 구독하는 역할을 합니다. 컴포넌트에서 따로 구독할 필요는 없습니다.
+    -->
+    <li *ngFor="let hero of heroes$ | async">
+      <a routerLink="/detail/{{hero.id}}">
+        {{hero.name}}
+      </a>
+    </li>
+  </ul>
+</div>
