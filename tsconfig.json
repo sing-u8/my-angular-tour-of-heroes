@@ -19,7 +19,23 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@schemas/*": [
+        "./src/app/schemas/*"
+      ],
+      "@services/*": [
+        "./src/app/services/*"
+      ],
+      "@mocks/*":[
+        "./src/app/mocks/*"
+      ] ,
+      "@environments/*": [
+        "./src/environments/*"
+      ],
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
